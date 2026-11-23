@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class BSTExample {
 
-
+    // Insert a character into the BST
     static Node insert(Node root, char value) {
         if (root == null) {
             return new Node(value);
@@ -17,7 +17,7 @@ public class BSTExample {
         return root;
     }
 
-
+    // Inorder: Left, Root, Right
     static void inorder(Node root) {
         if (root == null) return;
 
@@ -26,7 +26,7 @@ public class BSTExample {
         inorder(root.right);
     }
 
-
+    // Preorder: Root, Left, Right
     static void preorder(Node root) {
         if (root == null) return;
 
@@ -35,7 +35,7 @@ public class BSTExample {
         preorder(root.right);
     }
 
-
+    // Postorder: Left, Right, Root
     static void postorder(Node root) {
         if (root == null) return;
 
@@ -61,7 +61,7 @@ public class BSTExample {
 
         Node root = null;
 
-
+        // Build the BST
         for (int i = 0; i < size; i++) {
             if (!data[i].equalsIgnoreCase("null")) {
                 root = insert(root, data[i].charAt(0));
